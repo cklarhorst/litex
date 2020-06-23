@@ -244,7 +244,7 @@ class XilinxISEToolchain:
     # them through clock objects like DCM and PLL objects.
 
     def add_period_constraint(self, platform, clk, period):
-        clk.attr.add("keep")
+#        clk.attr.add("keep")
         platform.add_platform_command(
             """
 NET "{clk}" TNM_NET = "PRD{clk}";

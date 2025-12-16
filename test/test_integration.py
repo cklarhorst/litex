@@ -13,7 +13,7 @@ import itertools
 
 class TestIntegration(unittest.TestCase):
     def boot_test(self, cpu_type="vexriscv", cpu_variant="standard", args=""):
-        cmd = f'litex_sim --cpu-type={cpu_type} --cpu-variant={cpu_variant} {args} --opt-level=O0 --jobs {os.cpu_count()}'
+        cmd = f'litex_sim --cpu-type={cpu_type} --cpu-variant={cpu_variant} {args} --opt-level=O1 --jobs {os.cpu_count()}'
         litex_prompt = [r'\033\[[0-9;]+mlitex\033\[[0-9;]+m>']
         is_success = True
 

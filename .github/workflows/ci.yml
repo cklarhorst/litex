@@ -72,7 +72,7 @@ jobs:
           ./configure
           make -j$(nproc)
           sudo make install
-          ccache --show-log-stats -s -v
+          ccache -s -v
 
       # Install Project
       - name: Install Project
@@ -82,4 +82,4 @@ jobs:
       - name: Run Tests
         run: |
           python3 -m pytest -v --durations=0
-          ccache --show-log-stats -s -v
+          ccache -s -v

@@ -26,7 +26,7 @@ class TestIntegration(unittest.TestCase):
             try:
                 match_id = p.expect(litex_prompt, timeout=1200)
             except pexpect.EOF:
-                print('\n*** Premature termination')
+                print('\n*** Premature termination')# test
                 is_success = False
             except pexpect.TIMEOUT:
                 print('\n*** Timeout ')

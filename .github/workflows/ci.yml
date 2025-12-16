@@ -81,5 +81,6 @@ jobs:
       # Test
       - name: Run Tests
         run: |
+          export PATH="/usr/lib/ccache:/usr/local/opt/ccache/libexec:$PATH"
           python3 -m pytest -v --durations=0
           ccache -s -v
